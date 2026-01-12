@@ -18,6 +18,11 @@
     <button onclick="document.getElementById('onImage').src='images/on.png'">Turn On</button>
    <button onclick="document.getElementById('onImage').src='images/off.png'">Turn Off</button>
     <script src="{{ asset('js/app.js') }}">
+
+    
+
+    //then
+
         
         //this is for the alert message
         // alert("This is your first JavaScript");
