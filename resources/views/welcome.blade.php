@@ -1,89 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>My First Web Page</title>
 </head>
 <body>
 
-    <p id="id01">Id 01</p>
-    <p id="id02">Id 02</p>
-    <p id="id03">This is the three</p>
+    <h1>Welcome to My Page!</h1>
 
-    <p id="demo"></p>
+    <p id="demo">Javascript can change HTML content</p>
 
-    <p id="change">this is the change of an HTML</p>
+    <button type = "button" onclick = 'document.getElementById("demo").innerHTML = "Hello Javascript"'>Click Me</button>
 
-    <button id = "myButton"></button>
+    <p>Light on off in the below</p>
 
-    {{-- for the Jquery --}}
-    {{-- <script>
-        $(document).ready(function(){
-            var myElements = $("#id01");
-            $("#demo").text("the text from the id03 paragraph is : "+myElements[0].innerHTML)
+    <img id="onImage" src="{{ asset('images/on.png') }}" style="width:100px"></image>
 
-        })
-        </script> --}}
-
-{{-- for the Javascript --}}
-{{-- <script>
-    const myElement = document.getElementById("id01");
-    document.getElementById("demo").innerHTML = "the text from the id01 is " + myElement.innerHTML;
-</script> --}}
-
-{{-- finding by tag name --}}
-
-{{-- <script>
-    $(document).ready(function(){
-        var myElements = $("p");
-        $("#demo").text("the text in the first paragraph is "+ myElements[0].innerHTML)
-    })
-</script> --}}
-
-
-{{-- in below i write to the id01, i mean re-write --}}
-
-{{-- <script>
-$(document).ready(function() {
-  var myElement = $("#id01");
-  myElement.text("Hello Sweden!");
-});
-</script> --}}
-
-{{-- for hiding something --}}
-
-{{-- <script>
-    $(document).ready(function name() {
-        $("#id03").hide();
+    <button onclick="document.getElementById('onImage').src='images/on.png'">Turn On</button>
+   <button onclick="document.getElementById('onImage').src='images/off.png'">Turn Off</button>
+    <script src="{{ asset('js/app.js') }}">
         
-    })
-</script> --}}
+        //this is for the alert message
+        // alert("This is your first JavaScript");
 
 
-{{-- <script>
-$(document).ready(function() {
-  $("#id03").show();   // hide it
+
+
+
+         
+    </script>
   
-});
-</script> --}}
 
-{{-- <script>
-document.getElementById("demo").style.fontSize = "80px";
-</script> --}}
-
-<script>
-    $(document).ready(function(){
-        $("#id01").remove();
-    })
-</script>
-
-<script>
-const button = ducument.getElementById("myButton");
-button.addEventListener("click", function() {
-    
-    this.innerHTML = "you clicked me!";
-})
-
-</script>
-
-    </body>
+</body>
 </html>
